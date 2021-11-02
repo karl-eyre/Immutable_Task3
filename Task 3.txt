@@ -1,0 +1,15 @@
+Happy Path Tests:
+
+Scenario: when reward provided, user reward balance increased by reward amount. 
+
+Test: When the reward is provided, expect that the users reward balance equals current balance plus daily reward value.
+
+Scenario: On application startup if daily reward has been received, do nothing.
+
+Test: On application startup if reward has previously been received that day check balance at startup time equals current balance.
+
+Edge Case Tests:
+
+Scenario: User changes date on device to try and receive multiple rewards, expect no additional reward provided.
+
+Test: when reward function runs check that the date used to check for a new day is equal to UTC time & date, if so test passes.
